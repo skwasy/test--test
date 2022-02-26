@@ -12,7 +12,7 @@ int main()
 	case 3:
 		switch(n)
 		{
-		case 1:
+		case 1:    //不被执行，因为n = 2
 			n++;
 		case 2:
 			m++;
