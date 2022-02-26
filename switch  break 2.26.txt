@@ -16,6 +16,8 @@ int main()
 	case 7:
 		printf("weekend\n");
 		break;
+	default:
+		break;
 	}
 	return 0;
 }
