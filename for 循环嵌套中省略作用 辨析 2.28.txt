@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+	int i = 0;
+	int j = 0;
+	for (; i < 10; i++)
+	{
+		for (; j < 10; j++)
+			printf("hehe\n");
+	}
+	return 0;
+}
+//输出结果为 10个"hehe"此时在嵌套for循环中j的值不会被重置 for循环内循环十次 
+//j的值不会被重置、重新赋值。导致内置for循环结束后 j的值一直是10。
+//结果内置for循环10次数后 嵌套for循环不在打印
+
+
+//int main()
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (; i < 10; i++)
+//	{
+//		for (j = 0; j < 10; j++)
+//			printf("hehe\n");
+//	}
+//	return 0;
+//}
+// 输出结果为 100个"hehe" 内置for循环执行10次后 嵌套for循环进入内置for循环 j的的值将被重置
+// 这里的 "j = 0" 是赋值  j在10的时候 又将0重新赋值给j 得到了10x10 的结果
