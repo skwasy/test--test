@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main()
+{
+	int  i = 0;
+	do
+	{
+		printf("%d\n", i);
+		i++;
+	} 
+	while (i < 10);                          
+	return 0;
+}
+----------------------------------
+#include <stdio.h>
+int main()
+{
+	int  i = 0;
+	do
+	{
+		if (5 == i)
+			break;
+		printf("%d\n", i);
+		i++;
+	} 
+	while (i < 10);
+	return 0;
+}// do while中可以出现 break 和continue  break 跳出循环
+//  continue 重新判断循环（continue执行时，括号内 后面的不执行）
+//不是死循环 0，1，2，3，4          （break执行后，直接跳出循环 结束）
+---------------------------------------
+#include <stdio.h>
+int main()
+{
+	int  i = 0;
+	do
+	{
+		if (5 == i)
+			continue;
+		printf("%d\n", i);
+		i++;
+	} 
+	while (i < 10);
+	return 0;
+}//死循环 0，1，2，3，4  _
+
+
