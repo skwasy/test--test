@@ -6,12 +6,14 @@ int main()
 	int i = 1;
 	int n = 0;
 	int ret = 1;
+	int sum = 0;
 	for (n = 1; n <= 10; n++)
 	{
 		for (; i <= n; i++)//这里i不能写 i = 1不然就无限循环，将1赋值给i
 		{
 			ret = ret * i;
 		}
+		sum = sum + ret;
 	}
 	printf("ret =%d\n", ret);
 	return 0;
