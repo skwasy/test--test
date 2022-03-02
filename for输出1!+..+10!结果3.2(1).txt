@@ -1,20 +1,22 @@
-#include <stdio.h>
 输出1！+2！+...+10！结果
 //利用for循环嵌套，
+#include <stdio.h>
 int main()
 {
 	int i = 1;
 	int n = 0;
-	int ret = 1;
+	int ret;
 	int sum = 0;
-	for (n = 1; n <= 10; n++)
+	for (n = 1; n <= 2; n++)
 	{
-		for (; i <= n; i++)//这里i不能写 i = 1不然就无限循环，将1赋值给i
+		ret = 1;  //每一次进入内嵌for循环中，ret要被重置
+		for (i = 1; i <= n; i++)
 		{
 			ret = ret * i;
 		}
 		sum = sum + ret;
+
 	}
-	printf("ret =%d\n", ret);
+	printf("sum = %d\n", ret);
 	return 0;
 }
