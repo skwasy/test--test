@@ -1,0 +1,18 @@
+#include <stdio.h>
+输出1！+2！+...+10！结果
+//利用for循环嵌套，
+int main()
+{
+	int i = 1;
+	int n = 0;
+	int ret = 1;
+	for (n = 1; n <= 10; n++)
+	{
+		for (; i <= n; i++)//这里i不能写 i = 1不然就无限循环，将1赋值给i
+		{
+			ret = ret * i;
+		}
+	}
+	printf("ret =%d\n", ret);
+	return 0;
+}
