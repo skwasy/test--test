@@ -1,0 +1,22 @@
+
+// 水仙花 
+输出0-999
+水仙花： 一个数=它各位的立方和 153=1*1*1+5*5*5+3*3*3
+提示：for循环 求余 取整
+#include <stdio.h>
+int main()
+{
+	int i;
+	int a, b, c;
+	for (i = 0; i <= 999; i++)
+	{
+		a = i / 100;
+		b = i % 100 / 10;
+		c = i % 10;
+		if (i == a * a * a + b * b * b + c * c * c)
+		{
+			printf("%d\n", i);
+		}
+	}
+	return 0;
+}
