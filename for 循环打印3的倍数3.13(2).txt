@@ -1,0 +1,19 @@
+输出三的倍数
+
+#include <stdio.h>
+#include <windows.h> //Sleep头文件  S大写
+
+
+int main()
+{
+	int i;
+	for (i = 1; i >= 0; i++)
+	{
+		if (i % 3 == 0)
+		{
+			printf("%d ", i);
+			Sleep(200);//单位毫秒 停留的时间
+		}
+	}
+	return 0;
+}
