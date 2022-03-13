@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <windows.h>
+#include <stdlib.h>
+int main()
+{
+	char arr1[] = "hello, world"; //字符串以\0结尾
+	char arr2[] = "#########";
+	int left = 0;
+	//int right = sizeof(arr1) / sizeof(arr[0]) - 2;//所以要减2
+	int right = strlen(arr1) - 1;//strelen就是求字符串长度的 到\0就停止
+	while (left < right)
+	{
+		arr2[left] = arr1[left];
+		arr2[right] = arr1[right];
+		left++;
+		right--;
+		printf("%s\n", arr2);
+		Sleep(400); //单位毫秒 需要调用
+		system("cls");//系统函数需要调用  cls清除屏幕
+	}
+	printf("hello,world");
+	return 0;
+}
+
