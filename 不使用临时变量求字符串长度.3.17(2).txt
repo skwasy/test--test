@@ -1,0 +1,24 @@
+
+编写函数不允许创建临时变量，求字符串长度（不允许使用getchar）
+#include <stdio.h>
+#include <string.h>  // 调用strlen   求字符串长度函数
+
+int my_len(char* str)
+{
+	int count = 0;
+	while (*str != '\0')
+	{
+		count++;
+		str++;
+	}
+	return count;
+}
+int main()
+{
+	char arr[] = "hello world";
+	int len = my_len(arr);
+	int chang = strlen(arr);
+	printf("%d\n",chang);
+	printf("%d\n",len);
+	return 0;
+}
