@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void bubble_sort(int arr[], int sz)
+{
+	int i, j;
+	for (i = 0; i < sz - 1; i++)              // 这里是一共趟数， 10个数9趟 n个数 n-1趟 
+	{	
+		for (j = 0; j < sz - 1 - i; j++)   //每一趟结束后，最后一个数不动，再减去一个数  所以 随着趟数的增加  每一趟所使用的数字越少 j < sz - i - 1;
+		{				//这里的-1 是这一趟里所使用减少的元素  10个元素 处理9次   而减i是随着趟数的增加 每一趟所使用的元素次数逐步越少 
+			if (arr[j] > arr[j + 1])  //判断下标所对应的元素大小  并交换两个数字 
+			{
+				int t = arr[j + 1];
+				arr[j + 1] = arr[j];
+				arr[j] = t;
+			}
+		}
+	}
+}
+int main()
+{
+	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };  //创建数组
+	int sz = sizeof(arr) / sizeof(arr[0]);//算出 数组长度 
+	bubble_sort(arr, sz);                 //传过去的sz是指针   
+	int i = 0;
+	for (; i < sz; i++)                   //for循环打印数组
+	{
+		printf("%d ", arr[i]);
+	}
+	return 0;
+}
