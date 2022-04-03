@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void print(int a)//1234
+{
+	if (a > 9)
+	{
+		print(a / 10);//123
+	}
+	printf("%d ", a % 10);
+}
+
+int main()
+{
+	int a = 0;
+	scanf("%d", &a);
+	print(a);
+	return 0;
+}
