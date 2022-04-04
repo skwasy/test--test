@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void bubble_sort(int* arr, int sz)
+{
+	int i, j;
+	int flag = 1;  // 假设数组已经排序完成  
+	for (i = 0; i < sz - 1; i++)
+	{
+		for (j = 0; j < sz - 1 - i; j++)
+		{
+			if (arr[j] > arr[j + 1])  //进来两个数  两两判断  如若为真 则进去if语句 将flag变为0 
+			{
+				int t = arr[j + 1];
+				arr[j + 1] = arr[j];
+				arr[j] = t;
+				flag = 0;  
+			}
+		}
+		if (flag == 1)  //（for循环走完后  这里判断flag的值 如果为1  则没有进去上面循环  不需要变换连个值 减少循环次数
+		{
+			break;//跳出循环
+		}
+	}
+}
+
+int main()
+{
+	int arr[] = { 9,8,5,4,63,5,4,6,1 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	bubble_sort(arr, sz);
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
