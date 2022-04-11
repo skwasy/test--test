@@ -1,0 +1,19 @@
+
+int my_strlen(char* str)//char*指针 接收指针
+{
+char* start = str; //创建字符指针 变量名 start ，并将str传给start 
+//因为arr是一个数组，str就代表首元素地址  
+	char* end = str;//先把首元素地址给指针end 然后往后循环找到\0
+	while (*end != '\0')//并将\0所在下标给end指针
+	{
+		end++;
+	}
+	return end - start;//指针 –指针 代表中间元素个数
+}
+int main()
+{
+	char arr[] = { "bit" };
+	int len = my_strlen(arr); //创建自定义函数 传入数组
+	printf("%d", len);
+	return 0;
+}
