@@ -1,0 +1,46 @@
+创建一个数组 完成对数组的操作
+1. 实现Init() 初始化数组全为0
+2.实现Print() 打印数组的每个元素
+3.实现Reverse() 函数完成数组的逆置
+
+void Init(int* arr, int sz)//初始化函数权威0
+{
+	int i;
+	for (i = 0; i < sz; i++)
+	{
+		arr[i] = 0;
+	}
+}
+void Print(int* arr, int sz)//for循环打印函数
+{
+	int i;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
+
+void Reverse(int* arr, int sz)//首尾两数 交换 left++ right--
+{
+	int left = 0;
+	int right = sz - 1;
+	while (left < right)
+	{
+		int t = arr[left];
+		arr[left] = arr[right];
+		arr[right] = t;
+		left++;
+		right--;
+	}
+	printf("\n");
+}
+int main()
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10};
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	/*Init(arr, sz);*/   //初始化
+	Print(arr, sz);		//打印函数
+	Reverse(arr, sz);  // 逆序排列
+	Print(arr, sz);		//打印函数
+	return 0;
+}
