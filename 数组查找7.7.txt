@@ -1,0 +1,17 @@
+#include <stdio.h>
+#define Find 9
+int main()
+{
+	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int i;
+	for (i = 0; i < sz - 1; i++)
+	{
+		if (Find == arr[i])
+		{
+			printf("找到了，是第%d个数\n", i+1);
+			break;
+		}
+	}
+	return 0;
+}
